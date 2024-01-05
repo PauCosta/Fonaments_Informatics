@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main()
+
+{
+	srand(time(NULL));
+
+	int cares;
+
+	printf("Selecciona el numero de cares del teu dau: ");
+	scanf_s("%d", &cares);
+
+
+	int daus;
+
+	printf("Selecciona el numero de daus que vols tirar: ");
+	scanf_s("%d", &daus);
+
+
+	int num = 1;
+
+	while (num <= daus)
+
+	{
+		int valor = rand() % cares + 1;
+
+		printf("%d,", valor);
+
+		num++;
+	}
+
+
+	return 0;
+
