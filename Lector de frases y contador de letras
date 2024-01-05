@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char cadena[100];
+	printf("Escribe una frase: ");
+	gets(cadena);
+
+	int tam = strlen(cadena);
+	int contador = 0;
+
+	for (int x = 0; x < tam; x++)
+	{
+		if (cadena[x] == ' ')
+		{
+			break;
+		}
+		contador++;
+		printf("%c", cadena[x]);
+	}
+	printf(" [%d lletres] ", contador);
+	printf("\n");
+
+	for (int i = 0; i < tam; i++)
+	{
+		if (cadena[i] == ' ')
+		{
+			int contador = 0;
+			for (int j = i + 1; j <= tam; j++) 
+			{
+				if (cadena[j] == ' ' || j == tam)
+				{
+					break;
+				}
+				contador++;
+				printf("%c", cadena[j]);
+
+			}
+			printf(" [%d lletres] ", contador);
+			printf("\n");
+		}
+	}
+}
